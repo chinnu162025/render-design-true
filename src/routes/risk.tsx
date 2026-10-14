@@ -21,7 +21,7 @@ export const Route = createFileRoute("/risk")({
 function RiskPage() {
   const { risks } = useCivic();
   const [sel, setSel] = useState<string | null>(null);
-  const r = risks.find((x) => x.location.id === sel) ?? risks[0];
+  const r = risks.find((x) => x.location.id === sel) ?? risks[0]!;
   const keys = Object.keys(WEIGHTS) as (keyof typeof WEIGHTS)[];
 
   return (
