@@ -23,7 +23,7 @@ export const Route = createFileRoute("/report")({
 });
 
 const selectCls = "h-9 w-full rounded-md border border-input bg-card px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring";
-type Errors = Partial<Record<"category" | "title" | "description" | "locationId" | "severity" | "image", string>>;
+type Errors = Partial<Record<"category" | "title" | "description" | "locationId" | "severity" | "image", string | undefined>>;
 
 function ReportPage() {
   const { addComplaint, risks } = useCivic();

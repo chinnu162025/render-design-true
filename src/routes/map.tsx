@@ -18,7 +18,7 @@ export const Route = createFileRoute("/map")({
 
 function MapPage() {
   const { risks } = useCivic();
-  const [sel, setSel] = useState<string>(risks[0]?.location.id);
+  const [sel, setSel] = useState<string>(risks[0]?.location.id ?? "");
   const r = risks.find((x) => x.location.id === sel) ?? risks[0];
 
   return (

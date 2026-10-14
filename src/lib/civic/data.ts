@@ -33,8 +33,8 @@ export interface Complaint {
   severity: Severity;
   status: Status;
   createdAt: string;
-  resolvedAt?: string;
-  image?: string;
+  resolvedAt?: string | undefined;
+  image?: string | undefined;
 }
 
 /** Fixed anchor date so demonstration data and scores stay consistent. */
