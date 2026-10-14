@@ -126,7 +126,7 @@ function ReportPage() {
   );
 }
 
-function Field({ label, error, children, className }: { label: string; error?: string; children: React.ReactNode; className?: string }) {
+function Field({ label, error, children, className }: { label: string; error?: string | undefined; children: React.ReactNode; className?: string }) {
   return (
     <div className={className}>
       <Label className="mb-1.5 block">{label}</Label>
